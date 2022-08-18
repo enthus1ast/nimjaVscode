@@ -2,7 +2,8 @@
     "name": "nimja",
     "displayName": "nimja",
     "description": "typed and compiled template engine inspired by jinja2, twig and onionhammer/nim-templates for Nim.",
-    "version": "0.0.1",
+    "version": "0.0.2",
+    "publisher": "enthus1ast",
     "license": "MIT",
     "author": {
       "name": "enthus1ast"
@@ -14,8 +15,13 @@
     "engines": {
         "vscode": "^1.59.0"
     },
+    "icon": "images/icon.png",
     "categories": [
         "Programming Languages"
+    ],
+    "keywords": [
+        "nim",
+        "template"
     ],
     "extensionDependencies" : [
       "html"
@@ -34,7 +40,7 @@
         "grammars": [{
             "language": "html",
             "scopeName": "text.html.nimja",
-            "path": "./syntaxes/nimja.tmLanguage.json",
+            "path": "./syntaxes/nimja.tmLanguage",
             "embeddedLanguages": {
                 "source.json": "json",
                 "source.css": "css",

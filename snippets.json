@@ -43,5 +43,10 @@
     "prefix": ["extends"],
     "body": ["{% extends \"${1:name}\" %}"],
     "description": "extends"
+  },
+  "proc": {
+    "prefix": ["proc"],
+    "body": ["{% proc ${1:name}(${2:params}): ${3:string} = -%}", "\t${4:body}", "{%- endproc %}"],
+    "description": "extends"
   }
 }

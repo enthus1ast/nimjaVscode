@@ -6,4 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.2]
+- "Lend" twig's syntax
+- Added logo
+- Added `proc` snippet
+
+## [0.0.1]
 - Initial release

@@ -3,6 +3,14 @@
     "displayName": "nimja",
     "description": "typed and compiled template engine inspired by jinja2, twig and onionhammer/nim-templates for Nim.",
     "version": "0.0.1",
+    "license": "MIT",
+    "author": {
+      "name": "enthus1ast"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/enthus1ast/nimjaVscode"
+    },
     "engines": {
         "vscode": "^1.59.0"
     },

@@ -1,0 +1,47 @@
+{
+  "for Loop": {
+    "prefix": ["for"],
+    "body": ["{% for ${1:elem} in ${2:container}) %}", "\t$0", "{% endfor %}"],
+    "description": "for loop."
+  },
+  "while Loop": {
+    "prefix": ["while"],
+    "body": ["{% while ${1:condition} %}", "\t$0", "{% whilefor %}"],
+    "description": "while loop."
+  },
+  "if": {
+    "prefix": ["if"],
+    "body": ["{% if ${1:condition} %}", "\t$0", "{% endif %}"],
+    "description": "if condition"
+  },
+  "if else": {
+    "prefix": ["if_else"],
+    "body": ["{% if ${1:condition} %}", "\t$2", "{% else %}", "\t$3" , "{% endif %}"],
+    "description": "if/else condition"
+  },
+  "if elif": {
+    "prefix": ["if_elif"],
+    "body": ["{% if ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4" , "{% endif %}"],
+    "description": "if/elif condition"
+  },
+  "if elif else": {
+    "prefix": ["if_elif_else"],
+    "body": ["{% if ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4", "{% else %}" , "\t$5" , "{% endif %}"],
+    "description": "if/elif/else condition"
+  },
+  "block": {
+    "prefix": ["block"],
+    "body": ["{% block ${1:name} %}", "\t$2", "{% endblock %}"],
+    "description": "block"
+  },
+  "importnimja": {
+    "prefix": ["importnimja"],
+    "body": ["{% importnimja \"${1:name}\" %}"],
+    "description": "importnimja"
+  },
+  "extends": {
+    "prefix": ["extends"],
+    "body": ["{% extends \"${1:name}\" %}"],
+    "description": "extends"
+  }
+}

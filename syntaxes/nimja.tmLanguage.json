@@ -1,0 +1,32 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "nimja",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.nimja",
+				"match": "{%\\b(if|elif|else|endif|while|endwhile|for|endfor|block|endblock|extends|importnwt)\\b%}"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.nimja",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.nimja",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "text.html.nimja"
+}

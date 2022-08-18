@@ -1,0 +1,40 @@
+{
+    "name": "nimja",
+    "displayName": "nimja",
+    "description": "typed and compiled template engine inspired by jinja2, twig and onionhammer/nim-templates for Nim.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.59.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "extensionDependencies" : [
+      "html"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "html",
+            "aliases": ["nimja"],
+            "extensions": [".nimja"],
+            "configuration": "./language-configuration.json"
+        }],
+        "snippets": [{
+          "language": "html",
+          "path": "./snippets.json"
+        }],
+        "grammars": [{
+            "language": "html",
+            "scopeName": "text.html.nimja",
+            "path": "./syntaxes/nimja.tmLanguage.json",
+            "embeddedLanguages": {
+                "source.json": "json",
+                "source.css": "css",
+                "source.css.scss": "scss",
+                "source.js": "javascript",
+                "source.ts": "typescript",
+                "source.nim": "nim"
+            }
+        }]
+    }
+}

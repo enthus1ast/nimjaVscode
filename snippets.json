@@ -1,7 +1,7 @@
 {
   "for Loop": {
     "prefix": ["for"],
-    "body": ["{% for ${1:elem} in ${2:container}) %}", "\t$0", "{% endfor %}"],
+    "body": ["{% for ${1:elem} in ${2:container} %}", "\t$0", "{% endfor %}"],
     "description": "for loop."
   },
   "while Loop": {

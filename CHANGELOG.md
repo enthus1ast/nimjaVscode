@@ -6,6 +6,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.3]
+- Fix for loop snippet
+
 ## [0.0.2]
 - "Lend" twig's syntax
 - Added logo

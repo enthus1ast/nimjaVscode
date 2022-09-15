@@ -24,10 +24,50 @@
     "body": ["{% if ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4" , "{% endif %}"],
     "description": "if/elif condition"
   },
+  "elif": {
+    "prefix": ["elif"],
+    "body": ["{% elif ${1:condition} %}", "\t$2"],
+    "description": "elif condition"
+  },
   "if elif else": {
     "prefix": ["if_elif_else"],
     "body": ["{% if ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4", "{% else %}" , "\t$5" , "{% endif %}"],
     "description": "if/elif/else condition"
+  },
+    "when": {
+    "prefix": ["when"],
+    "body": ["{% when ${1:condition} %}", "\t$0", "{% endwhen %}"],
+    "description": "when condition"
+  },
+  "when else": {
+    "prefix": ["when_else"],
+    "body": ["{% when ${1:condition} %}", "\t$2", "{% else %}", "\t$3" , "{% endwhen %}"],
+    "description": "when/else condition"
+  },
+  "when elif": {
+    "prefix": ["when_elif"],
+    "body": ["{% when ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4" , "{% endwhen %}"],
+    "description": "if/elif condition"
+  },
+  "when elif else": {
+    "prefix": ["when_elif_else"],
+    "body": ["{% when ${1:condition} %}", "\t$2", "{% elif ${3:condition} %}", "\t$4", "{% else %}" , "\t$5" , "{% endwhen %}"],
+    "description": "when/elif/else condition"
+  },
+    "case": {
+    "prefix": ["case"],
+    "body": ["{% case ${1:stmt} %}", "{% of ${2:condition} %}", "{% endcase %}"],
+    "description": "case condition"
+  },
+    "of": {
+    "prefix": ["of"],
+    "body": ["{% of ${1:condition} %}"],
+    "description": "of"
+  },
+  "case else": {
+    "prefix": ["case_else"],
+    "body": ["{% case ${1:stmt} %}", "{% of ${2:condition} %}", "{% else %}", "\t$3" , "{% endcase %}"],
+    "description": "case/else condition"
   },
   "block": {
     "prefix": ["block"],
@@ -48,5 +88,25 @@
     "prefix": ["proc"],
     "body": ["{% proc ${1:name}(${2:params}): ${3:string} = -%}", "\t${4:body}", "{%- endproc %}"],
     "description": "extends"
+  },
+  "var": {
+    "prefix": ["var"],
+    "body": ["{{ ${1:var} }}"],
+    "description": "empty block: output {{ }}"
+  },
+  "var-": {
+    "prefix": ["var-"],
+    "body": ["{{- ${1:var} -}}"],
+    "description": "empty block: output {{- -}}"
+  },
+  "eval": {
+    "prefix": ["eval"],
+    "body": ["{% ${1:var} %}"],
+    "description": "empty block: eval {% %}"
+  },
+  "eval-": {
+    "prefix": ["eval-"],
+    "body": ["{%- ${1:var} -%}"],
+    "description": "empty block: eval {%- -%}"
   }
 }

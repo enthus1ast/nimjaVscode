@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## [0.0.4]
+- Added `case`  `of` snippets
+- Fixed `elif`
+
 ## [0.0.3]
 - Fix for loop snippet
 
